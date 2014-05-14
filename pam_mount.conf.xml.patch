@@ -1,0 +1,10 @@
+--- pam_mount.conf.xml.dist	2014-05-14 16:25:08.417214490 +0200
++++ pam_mount.conf.xml	2014-05-14 16:25:40.260218111 +0200
+@@ -38,6 +38,7 @@
+ 
+ 		<!-- pam_mount parameters: Volume-related -->
+ 
++<volume user="alice" fstype="auto" path="/dev/sda2" mountpoint="/home/alice" options="fsck,noatime" />
+ <mkmountpoint enable="1" remove="true" />
+ 
+ 
