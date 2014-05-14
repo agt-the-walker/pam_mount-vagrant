@@ -4,7 +4,7 @@
  
  		<!-- pam_mount parameters: Volume-related -->
  
-+<volume user="alice" fstype="auto" path="/dev/sda2" mountpoint="/home/alice" options="fsck,noatime" />
++<volume user="alice" fstype="crypt" path="/dev/sda2" mountpoint="/home/alice" options="fsck,noatime" />
  <mkmountpoint enable="1" remove="true" />
  
  
