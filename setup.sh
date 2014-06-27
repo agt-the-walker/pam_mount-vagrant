@@ -12,8 +12,9 @@ if ! pacman -Qq | fgrep -qx pam_mount; then
     pacman --noconfirm -S pam_mount
 fi
 
-if ! fgrep -q pam_mount /etc/pam.d/system-auth; then
-    patch /etc/pam.d/system-auth /vagrant/system-auth.patch
+if ! fgrep -q pam_mount /etc/pam.d/login; then
+    # https://bbs.archlinux.org/viewtopic.php?pid=1416090#p1416090
+    (echo; cat /vagrant/login.append) >>/etc/pam.d/login
 fi
 
 ### Create user account

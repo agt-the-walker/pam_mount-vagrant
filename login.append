@@ -1,0 +1,4 @@
+auth     required   pam_mount.so
+auth     required   pam_unix.so use_first_pass
+session  optional   pam_mount.so
+session  required   pam_unix.so
