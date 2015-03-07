@@ -37,9 +37,8 @@ This small project shows how to configure and use `pam_mount` on Arch Linux.
     vagrant@vagrant-arch$ df | grep ^/dev
     /dev/sda1       15349744   1288484  14044876   9% /
 
-From the VirtualBox console, log in as `alice` (password `bob`). The
-`(mount.c:68)` and `(mount.c:72)` messages are normal. Let's check that the
-crypted partition has been mounted:
+From the VirtualBox console, log in as `alice` (password `bob`). Let's check
+that the crypted partition has been mounted:
 
     vagrant@vagrant-arch$ df | grep ^/dev
     /dev/sda1              15349744   1296680  14036680   9% /
