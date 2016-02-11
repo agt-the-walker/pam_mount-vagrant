@@ -25,7 +25,7 @@ This small project shows how to configure and use `pam_mount` on Arch Linux.
 
     # Replace "packer build" by "packer-io build" on Arch Linux itself
     $ packer build -only=virtualbox-iso arch-template.json
-      vagrant box add arch packer_arch_virtualbox.box
+      vagrant box add arch output/packer_arch_virtualbox.box
 
     $ cd ~/src/git  # back to where we started
       git clone https://github.com/agt-the-walker/pam_mount-vagrant
