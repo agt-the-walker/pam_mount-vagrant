@@ -8,11 +8,11 @@ USER_ACCOUNT=alice
 
 ### Install pam_mount
 
-if ! pacman -Qq | fgrep -qx pam_mount; then
+if ! pacman -Qq | grep -qx pam_mount; then
     pacman --noconfirm -S pam_mount
 fi
 
-if ! fgrep -q pam_mount /etc/pam.d/login; then
+if ! grep -q pam_mount /etc/pam.d/login; then
     # https://bbs.archlinux.org/viewtopic.php?pid=1416090#p1416090
     (echo; cat /vagrant/login.append) >>/etc/pam.d/login
 fi
@@ -43,6 +43,6 @@ if [[ ! -d /home/$USER_ACCOUNT ]]; then
     mkdir /home/$USER_ACCOUNT
 fi
 
-if ! fgrep -q '<volume' /etc/security/pam_mount.conf.xml; then
+if ! grep -q '<volume' /etc/security/pam_mount.conf.xml; then
     patch /etc/security/pam_mount.conf.xml /vagrant/pam_mount.conf.xml.patch
 fi
