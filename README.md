@@ -12,7 +12,7 @@ This small project shows how to configure and use `pam_mount` on Arch Linux.
 
 # Requirements
 
-* [Git](http://git-scm.com/)
+* [Git](https://git-scm.com/)
 * [Packer](https://www.packer.io/)
 * [Vagrant](https://www.vagrantup.com/)
 * [VirtualBox](https://www.virtualbox.org/)
@@ -53,5 +53,5 @@ has been unmounted:
 
 * https://github.com/elasticdog/packer-arch: I forked this repository since
   I needed an extra partition for pam\_mount
-* http://sourceforge.net/p/pam-mount/mailman/message/32345455/:
+* https://sourceforge.net/p/pam-mount/mailman/message/32345455/:
   `login.append` comes from this message.
