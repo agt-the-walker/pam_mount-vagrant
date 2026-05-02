@@ -19,6 +19,9 @@ This small project shows how to configure and use `pam_mount` on Arch Linux.
 
 # Walkthrough
 
+    $ packer plugins install github.com/hashicorp/virtualbox
+      packer plugins install github.com/hashicorp/vagrant
+
     $ cd ~/src/git  # or wherever you put your cloned github repos
       git clone https://github.com/agt-the-walker/packer-arch.git
       cd packer-arch/
