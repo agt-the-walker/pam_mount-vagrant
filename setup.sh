@@ -31,7 +31,7 @@ if ! cryptsetup isLuks $HOME_DEVICE; then
     cryptsetup --key-file <(echo -n "$PASSPHRASE") luksOpen $HOME_DEVICE home
     mkfs.ext4 -q /dev/mapper/home
     mount /dev/mapper/home /mnt
-    chown $USER_ACCOUNT.$USER_ACCOUNT /mnt
+    chown $USER_ACCOUNT:$USER_ACCOUNT /mnt
     chmod 700 /mnt
     umount /mnt
     cryptsetup luksClose home || true
